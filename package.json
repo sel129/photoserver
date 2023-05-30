@@ -1,0 +1,23 @@
+{
+  "name": "photoserver",
+  "version": "1.0.0",
+  "description": "A server to store your photos",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sel129/photoserver.git"
+  },
+  "author": "Scott Lis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sel129/photoserver/issues"
+  },
+  "homepage": "https://github.com/sel129/photoserver#readme",
+  "dependencies": {
+    "expressjs": "^1.0.1",
+    "multer": "^1.4.5-lts.1"
+  }
+}
