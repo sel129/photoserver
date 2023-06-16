@@ -1,8 +1,10 @@
 const express = require('express')
 const multer  = require('multer')
-const { Level } = require('level')
+const { db } = require('./db');
+const {authCheck} = require('./authMiddleware')
+
 const upload = multer({ dest: 'uploads/' })
-const db = new Level('uploads/photodb', { valueEncoding: 'json' })
+//const db = new Level('uploads/photodb', { valueEncoding: 'json' })
 const port = 3000;
 
 const app = express()
@@ -17,6 +19,7 @@ async function initialize() {
 }
 initialize();
 
+app.use(authCheck)
 app.use(express.static('uploads'))
 
 app.post('/upload', upload.single('photo'), async function (req, res, next) {
