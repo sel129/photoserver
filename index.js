@@ -4,7 +4,6 @@ const { db } = require('./db');
 const {authCheck} = require('./authMiddleware')
 
 const upload = multer({ dest: 'uploads/' })
-//const db = new Level('uploads/photodb', { valueEncoding: 'json' })
 const port = 3000;
 
 const app = express()
